@@ -18,7 +18,7 @@ sunflower.prototype={
 		if(Date.now()-this.lastSun>=10000){
 			suns.push(new Sun(this.x,this.y,this.suns));
 			this.lastSun=Date.now();
-		};
+		}
 	}
 };
 peashooter=function(x,y){
@@ -106,7 +106,7 @@ Shot.prototype={
 	draw:function(){
 		context.beginPath();
 		context.arc(this.x, this.y, this.range, 0, 2 * Math.PI, false);
-		context.fillStyle = 'yellow';
+		context.fillStyle = '#CA8123';
 		context.fill();
 	},
 	move:function(){
@@ -235,5 +235,5 @@ Shot2.prototype={
 		this.dy++;
 		this.life--;
 		console.log(this.life);
-	},
+	}
 };
