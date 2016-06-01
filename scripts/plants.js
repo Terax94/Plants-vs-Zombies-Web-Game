@@ -106,7 +106,7 @@ Shot.prototype={
 	draw:function(){
 		context.beginPath();
 		context.arc(this.x, this.y, this.range, 0, 2 * Math.PI, false);
-		context.fillStyle = 'yellow';
+		context.fillStyle = 'black';
 		context.fill();
 	},
 	move:function(){
@@ -179,61 +179,61 @@ Sun.prototype={
 		return false;
 	}
 };
-cornpult=function(x,y){
+wallnut=function(x,y){
 	this.x=Math.floor(x/gamefield.playgroundWidth)*gamefield.playgroundWidth;
 	this.y=Math.floor(y/gamefield.playgroundHeight)*gamefield.playgroundHeight;
 	this.start=Date.now();
-	this.healt=10;
-	this.attack=1;
-	this.lastShot=Date.now();
+	this.healt=15; //Health changed
+	//this.attack=1;
+	//this.lastShot=Date.now();
 	snumb-=this.cost;
 	this.image = new Image();
-	this.image.src="images/CornPultHD.png";
+	this.image.src="images/WallnutHD.png";
 };
-cornpult.prototype={
+wallnut.prototype={
 	cost:100,
 	draw:function(){
 		context.drawImage(this.image,this.x,this.y,gamefield.playgroundWidth,gamefield.playgroundHeight);
 	},
-	checkShot:function(){
-		for( var i in zombies){
-			var objective = zombies[i];
-			if(objective.y==this.y){
-				if(Date.now()-this.lastShot>7000){
-					shots.push(new Shot2(this.x,this.y,objective,this.attack));
-					this.lastShot=Date.now();
-					break;
-				}
-			}
-		}
-	}
+	//checkShot:function(){
+	//	for( var i in zombies){
+	//		var objective = zombies[i];
+	//		if(objective.y==this.y){
+	//			if(Date.now()-this.lastShot>7000){
+	//				shots.push(new Shot2(this.x,this.y,objective,this.attack));
+	//				this.lastShot=Date.now();
+	//				break;
+	//			}
+	//		}
+	//	}
+	//}
 };
-Shot2=function(x,y,t,attack){
-	this.x=x;
-	this.y=y;
-	this.target=t;
-	this.attack=attack;
-	this.tx=t.x+t.dx*this.steps;
-	this.range=5;
-	this.ty=t.y;
-	this.life=this.steps;
-	this.dy=-this.steps/2+1;//dy;
-	this.dx=(t.x-x-20)/this.steps;
-	
-};
-Shot2.prototype={
-	steps:40,
-	draw:function(){
-		context.beginPath();
-		context.arc(this.x, this.y, this.range, 0, 2 * Math.PI, false);
-		context.fillStyle = 'black';
-		context.fill();
-	},
-	move:function(){
-		this.x+=this.dx;
-		this.y+=this.dy;
-		this.dy++;
-		this.life--;
-		console.log(this.life);
-	},
-};
+//Shot2=function(x,y,t,attack){
+//	this.x=x;
+//	this.y=y;
+//	this.target=t;
+//	this.attack=attack;
+//	this.tx=t.x+t.dx*this.steps;
+//	this.range=5;
+//	this.ty=t.y;
+//	this.life=this.steps;
+//	this.dy=-this.steps/2+1;//dy;
+//	this.dx=(t.x-x-20)/this.steps;
+//	
+//};
+//Shot2.prototype={
+//	steps:40,
+//	draw:function(){
+//		context.beginPath();
+//		context.arc(this.x, this.y, this.range, 0, 2 * Math.PI, false);
+//		context.fillStyle = 'black';
+//		context.fill();
+//	},
+//	move:function(){
+//		this.x+=this.dx;
+//		this.y+=this.dy;
+//		this.dy++;
+//		this.life--;
+//		console.log(this.life);
+//	},
+//};
