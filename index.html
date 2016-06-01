@@ -6,8 +6,8 @@
 			canvas {
 				border:1px black solid;
 				position:absolute;
-				top:0px;
-				left:0px;
+				top:0;
+				left:0;
 			}
 		</style>
 		<script src="scripts/plants.js"></script>
@@ -81,7 +81,7 @@
 				img: "SunflowerHD.png",
 				name:"sunflower",
 				x:1250,
-				y:65,
+				y:65
 			},
 			1:{
 				id:"b",
@@ -89,7 +89,7 @@
 				img: "PeashooterHD.png",
 				name:"peashooter",
 				x:1250,
-				y:65+90,
+				y:65+90
 			},
 			2:{
 				id:"c",
@@ -97,7 +97,7 @@
 				img: "WallnutHD.png",
 				name:"wallnut",
 				x:1250,
-				y:65+180,	
+				y:65+180
 			},
             3:{
                 id:"d",
@@ -105,7 +105,7 @@
                 img: "25.jpg",
                 name: "cost25",
                 x:1450,
-                y:65,         
+                y:65
               },
             4:{
                 id:"e",
@@ -113,7 +113,7 @@
                 img: "50.jpg",
                 name: "cost50",
                 x:1450,
-                y:65+90,         
+                y:65+90
               },
             5:{
                 id:"f",
@@ -121,7 +121,7 @@
                 img: "100.jpg",
                 name: "cost100",
                 x:1450,
-                y:65+180,         
+                y:65+180
               }
 		}
 	};
@@ -158,7 +158,7 @@
 		
 		gamefield.fill(gamefield.gamefield);
 		
-	};
+	}
 
 	function mainLoop(){
 		
@@ -171,7 +171,7 @@
 		if(isPlaying){
 			requestAnimationFrame(mainLoop);
 		}
-	};
+	}
 
 	function draw(){
 		
@@ -206,7 +206,7 @@
 		/* Draw sidebar */
 		
 		sidebar.draw();
-	};
+	}
 
 	function move(){
 		
@@ -227,7 +227,7 @@
 		for(var i in shots){
 			shots[i].move();
 		}
-	};		
+	}
 
 	function check(){
 		
@@ -240,7 +240,7 @@
 			if(typeof(plants[i].checkShot) === "function"){
 				plants[i].checkShot();
 			}
-		};
+		}
 		i=0;
 		
 		/* Check suns life */
@@ -249,7 +249,7 @@
 			if(suns[i].checkLife()){
 				suns.splice(i,1);
 			}
-		};
+		}
 		i=0;
 		
 		/* Check if shot hit the target */
@@ -275,14 +275,14 @@
 			if(objective.x-objective.range>=gamefield.numX*gamefield.playgroundWidth){
 				shots.splice(i,1);
 			}
-		};
+		}
 		i=0;
 		
 		
 		for(var i in zombies){
 			zombies[i].checkBite();
-		};
-	};
+		}
+	}
 	
 	function spawn(){
 		
@@ -293,7 +293,7 @@
 			zombies.push(new walker((gamefield.numX*gamefield.playgroundWidth+40),row*gamefield.playgroundHeight));
 			lastZombieAdd=Date.now();
 		}
-	};
+	}
 	
 	function click(data){
 		
@@ -341,7 +341,7 @@
 			gamefield.gamefield[Yko][Xko]=player.select[1];
 			player.select=false;			
 		}
-	};
+	}
 	
 	function colision(a,b){
   		if((b.x+b.width>a.x)&&
@@ -351,14 +351,14 @@
     		return 1;
   		}  
 		return 0;
-	};
+	}
 	
 	function clickIn(x,y,obj){
 		if((obj.x<x)&&(obj.x+obj.range*2>x)&&(obj.y<y)&&(obj.y+obj.range*2>y)){
 			return 1;
 		}
 		return 0;
-	};
+	}
 	
 	window.onclick=function(d){
 		click(d);
