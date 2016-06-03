@@ -1,12 +1,11 @@
-# PLANTS VS. ZOMBIES - NBU WEB GAME DEVELOPMENT ASSIGNMEN
----------------------------------------------------------
+# PLANTS VS. ZOMBIES - NBU web game team assignments
   
 ## Contribution
 ---------------
 
-*Teodor Angelov
-*Kiril Borisov
-*Arman Gemdjian
+* Teodor Angelov
+* Kiril Borisov
+* Arman Gemdjian
 
 ## Description
 --------------
@@ -31,7 +30,7 @@ shoot him and 3 shots are enought for the zombie to be killed. When the player s
 on fixed time (10 seconds) it gives 50 suns and player has some seconds to collect them. 
 A wallnut is used to stop zombies, it lives about 15 seconds. 
 
-Actually, the game never ends...
+**Actually, the game never ends...**
 
 ## Team work
 ------------
@@ -42,7 +41,7 @@ Every contributor has it's own tasks:
 
 ## Used technologies
 --------------------
-*HTML 5 - for canvas
-*Native JavaScript - for game logic, math, etc..
+* HTML 5 - for canvas
+* Native JavaScript - for game logic, math, etc..
 
-### If you have an advice for code improvements please feel free to contribute to our repository : ) 
+### If you have any advices for code improvements, bug fixes and adding new features please feel free to contribute to our repository : ) 
