@@ -1,5 +1,7 @@
 # PLANTS VS. ZOMBIES - NBU web game team assignments
   
+  ![PlantsVsZombies](/images/main.png)
+  
 ## Contribution
 ---------------
 
