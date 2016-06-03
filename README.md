@@ -36,9 +36,9 @@ A wallnut is used to stop zombies, it lives about 15 seconds.
 ## Team work
 
 Every contributor has it's own tasks:
-*Teodor Angelov - implementation of zombies movement and demage
-*Kiril Borisov - implementation of plants actions
-*Arman Gemdjian - setting up canvas, testing and bug fixing
+* Teodor Angelov - implementation of zombies movement and demage
+* Kiril Borisov - implementation of plants actions
+* Arman Gemdjian - setting up canvas, testing and bug fixing
 
 ## Used technologies
 
